@@ -1,0 +1,26 @@
+<nz-sider
+  class="menu-sidebar"
+  nzWidth="256px"
+  [nzCollapsed]="isCollapsed"
+  (mouseenter)="isCollapsed = false"
+  (mouseleave)="isCollapsed = true"
+>
+  <div
+    class="contenedor-sider"
+    [ngClass]="{ 'sider-hover': !isCollapsed, 'sider-hover-off': isCollapsed }"
+  >
+    <div class="sidebar-logo">
+      <a routerLink="/home">
+        <h1 class="sider-logo">ꓷN</h1>
+      </a>
+    </div>
+    <ul
+      nz-menu
+      nzTheme="dark"
+      nzMode="inline"
+      [nzInlineCollapsed]="isCollapsed"
+    >
+      
+    </ul>
+  </div>
+</nz-sider>
